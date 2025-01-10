@@ -1,0 +1,152 @@
+/* Importar la fuente Roboto */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1 {
+  text-align: center;
+  color: #4B0082; /* Color morado */
+}
+
+#user-interface, #admin-interface {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #6A0DAD; /* Color morado más oscuro */
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input-group input, .input-group select {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  background-color: #6A0DAD; /* Color morado */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #5A0C99; /* Color morado más oscuro */
+}
+
+#orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#orders-table th, #orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#orders-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#order-status-display {
+  margin-top: 30px;
+}
+
+#order-status-display p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Estilos para la línea de progreso */
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 40px;
+}
+
+.progress-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.progress-step {
+  text-align: center;
+  position: relative;
+  width: 12.5%;
+}
+
+.progress-step.active .step-icon {
+  background-color: #6A0DAD; /* Color morado */
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.progress-step.completed .step-icon {
+  background-color: #6A0DAD; /* Color morado */
+  color: #fff;
+}
+
+.step-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #999;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.step-label {
+  font-size: 12px;
+  width: 80px;
+  margin: 0 auto;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .progress-container {
+    flex-wrap: wrap;
+  }
+  
+  .progress-step {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .progress-container::before {
+    display: none;
+  }
+}

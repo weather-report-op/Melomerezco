@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Me lo Merezco - Seguimiento de Pedidos</title>
+  <!-- Importar Google Fonts y Font Awesome para iconos -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Me lo Merezco</h1>
+
+    <!-- Interfaz de Usuario -->
+    <div id="user-interface">
+      <h2>Rastrea tu pedido</h2>
+      <div class="input-group">
+        <input type="text" id="order-id-input" placeholder="Ingresa tu número de pedido">
+        <button id="track-order-btn">Rastrear Pedido</button>
+      </div>
+      <div id="order-status-display"></div>
+    </div>
+
+    <!-- Interfaz de Administrador Oculta -->
+    <div id="admin-interface" style="display: none;">
+      <h2>Panel de Administración</h2>
+      <div class="input-group">
+        <input type="text" id="admin-order-id-input" placeholder="Número de pedido">
+        <select id="status-select">
+          <!-- Opciones de estatus serán añadidas por JavaScript -->
+        </select>
+        <button id="update-status-btn">Actualizar Estado</button>
+      </div>
+
+      <h3>Lista de Pedidos</h3>
+      <table id="orders-table">
+        <thead>
+          <tr>
+            <th>Número de Pedido</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los pedidos se mostrarán aquí -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Agrega el archivo JavaScript -->
+  <button id="admin-access-btn" style="display: none;">Acceder como Administrador</button>
+  <script src="app.js"></script>
+</body>
+</html>
